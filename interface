@@ -1,0 +1,45 @@
+import sys
+from PyQt5 import QtWidgets, QtGui
+from PyQt5.QtCore import Qt
+
+class MyApp(QtWidgets.QWidget):
+
+    def __init__(self):
+        super().__init__()
+
+        # Create widgets
+        self.simulation_time_button = QtWidgets.QPushButton("Calculate Simulation Time")
+        self.uncertainty_button = QtWidgets.QPushButton("Calculate Uncertainty")
+        self.simulation_time_result = QtWidgets.QLineEdit()
+        self.uncertainty_result = QtWidgets.QLineEdit()
+
+        # Create layout and add widgets
+        layout = QtWidgets.QGridLayout()
+        layout.addWidget(self.simulation_time_button,0,0)
+        layout.addWidget(self.simulation_time_result,0,1)
+        layout.addWidget(self.uncertainty_button,1,0)
+        layout.addWidget(self.uncertainty_result,1,1)
+        # Set layout to the main window
+        self.setLayout(layout)
+
+        # Connect buttons to callback functions
+        self.simulation_time_button.clicked.connect(self.calculate_simulation_time)
+        self.uncertainty_button.clicked.connect(self.calculate_uncertainty)
+
+        # Set main window properties
+        self.setGeometry(200, 200, 400, 200)
+        self.setWindowTitle("My App")
+
+    def calculate_simulation_time(self):
+        # aqui deberas incluir como se llama el script para calcular el tiempo de simulación y como se ejecuta
+        pass
+
+    def calculate_uncertainty(self):
+        # aqui deberas incluir como se llama el script para calcular la incerteza y como se ejecuta
+        pass
+
+if __name__ == '__main__':
+    app = QtWidgets.QApplication(sys.argv)
+    ex = MyApp()
+    ex.show()
+    sys.exit(app.exec_())
