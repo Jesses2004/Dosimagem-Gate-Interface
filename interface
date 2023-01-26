@@ -31,11 +31,11 @@ class MyApp(QtWidgets.QWidget):
         self.setWindowTitle("My App")
 
     def calculate_simulation_time(self):
-        # aqui deberas incluir como se llama el script para calcular el tiempo de simulación y como se ejecuta
+        # incluir como chamar o script para calcular o tempo de simulação e como ele é executado
         pass
 
     def calculate_uncertainty(self):
-        # aqui deberas incluir como se llama el script para calcular la incerteza y como se ejecuta
+        # incluir como chamar o script para calcular a incerteza e como ele é executado
         pass
 
 if __name__ == '__main__':
